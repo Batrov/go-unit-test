@@ -6,6 +6,7 @@ import (
 )
 
 func init() {
+	a = 5
 }
 
 func TestMain(m *testing.M) {
