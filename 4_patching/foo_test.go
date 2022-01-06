@@ -2,12 +2,12 @@ package module4
 
 import "testing"
 
-func Test_sumNew(t *testing.T) {
+func Test_SumNew(t *testing.T) {
 
 	const (
-		Success       = "Test_sumNew_Success"
-		SuccessPatch1 = "Test_sumNew_SuccessPatch1"
-		SuccessPatch2 = "Test_sumNew_SuccessPatch2"
+		Success       = "Test_SumNew_Success"
+		SuccessPatch1 = "Test_SumNew_SuccessPatch1"
+		SuccessPatch2 = "Test_SumNew_SuccessPatch2"
 	)
 
 	type args struct {
@@ -61,8 +61,8 @@ func Test_sumNew(t *testing.T) {
 
 			}
 
-			if got := sumNew(tt.args.a, tt.args.b); got != tt.want {
-				t.Errorf("sumNew() = %v, want %v", got, tt.want)
+			if got := SumNew(tt.args.a, tt.args.b); got != tt.want {
+				t.Errorf("SumNew() = %v, want %v", got, tt.want)
 			}
 		})
 	}

@@ -6,7 +6,7 @@ import (
 	gomock "github.com/golang/mock/gomock"
 )
 
-func TestBar_sumNew(t *testing.T) {
+func TestBar_SumNew(t *testing.T) {
 
 	ctrl := gomock.NewController(t)
 	defer ctrl.Finish()
@@ -41,16 +41,16 @@ func TestBar_sumNew(t *testing.T) {
 
 			switch tt.name {
 			case "SuccessMock1":
-				mockFoo.EXPECT().sum(int64(5), int64(7)).Return(int64(12))
-				mockFoo.EXPECT().getMessage(int64(1)).Return("Message 2")
+				mockFoo.EXPECT().Sum(int64(5), int64(7)).Return(int64(12))
+				mockFoo.EXPECT().GetMessage(int64(1)).Return("Message 2")
 
 			case "SuccessMock2":
-				mockFoo.EXPECT().sum(int64(5), int64(7)).Return(int64(-3))
-				mockFoo.EXPECT().getMessage(int64(-1)).Return("Message 2")
+				mockFoo.EXPECT().Sum(int64(5), int64(7)).Return(int64(-3))
+				mockFoo.EXPECT().GetMessage(int64(-1)).Return("Message 2")
 
 			}
 
-			if got := bar.sumNew(tt.args.a, tt.args.b); got != tt.want {
+			if got := bar.SumNew(tt.args.a, tt.args.b); got != tt.want {
 				t.Errorf("Bar.sumNew() = %v, want %v", got, tt.want)
 			}
 		})

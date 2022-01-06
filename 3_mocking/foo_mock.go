@@ -33,30 +33,30 @@ func (m *MockFooInterface) EXPECT() *MockFooInterfaceMockRecorder {
 	return m.recorder
 }
 
-// getMessage mocks base method.
-func (m *MockFooInterface) getMessage(id int64) string {
+// GetMessage mocks base method.
+func (m *MockFooInterface) GetMessage(id int64) string {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "getMessage", id)
+	ret := m.ctrl.Call(m, "GetMessage", id)
 	ret0, _ := ret[0].(string)
 	return ret0
 }
 
-// getMessage indicates an expected call of getMessage.
-func (mr *MockFooInterfaceMockRecorder) getMessage(id interface{}) *gomock.Call {
+// GetMessage indicates an expected call of GetMessage.
+func (mr *MockFooInterfaceMockRecorder) GetMessage(id interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "getMessage", reflect.TypeOf((*MockFooInterface)(nil).getMessage), id)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMessage", reflect.TypeOf((*MockFooInterface)(nil).GetMessage), id)
 }
 
-// sum mocks base method.
-func (m *MockFooInterface) sum(a, b int64) int64 {
+// Sum mocks base method.
+func (m *MockFooInterface) Sum(a, b int64) int64 {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "sum", a, b)
+	ret := m.ctrl.Call(m, "Sum", a, b)
 	ret0, _ := ret[0].(int64)
 	return ret0
 }
 
-// sum indicates an expected call of sum.
-func (mr *MockFooInterfaceMockRecorder) sum(a, b interface{}) *gomock.Call {
+// Sum indicates an expected call of Sum.
+func (mr *MockFooInterfaceMockRecorder) Sum(a, b interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "sum", reflect.TypeOf((*MockFooInterface)(nil).sum), a, b)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Sum", reflect.TypeOf((*MockFooInterface)(nil).Sum), a, b)
 }

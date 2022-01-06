@@ -1,12 +1,14 @@
 package module2
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestMain(m *testing.M) {
 	a = 2
 }
 
-func Test_sum(t *testing.T) {
+func Test_Sum(t *testing.T) {
 	type args struct {
 		b int64
 	}
@@ -19,8 +21,8 @@ func Test_sum(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := sum(tt.args.b); got != tt.want {
-				t.Errorf("sum() = %v, want %v", got, tt.want)
+			if got := Sum(tt.args.b); got != tt.want {
+				t.Errorf("Sum() = %v, want %v", got, tt.want)
 			}
 		})
 	}
