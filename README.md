@@ -6,7 +6,7 @@ Module 1:
 Basic unit testing
 
 Module 2:
-Create a funtion that runs before test (init)
+Create a function that runs before test (init)
 
 Module 3:
 Mocking function using mockgen
