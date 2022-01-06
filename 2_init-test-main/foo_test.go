@@ -1,11 +1,18 @@
 package module2
 
 import (
+	"os"
 	"testing"
 )
 
+func init() {
+}
+
 func TestMain(m *testing.M) {
 	a = 2
+	exitVal := m.Run()
+
+	os.Exit(exitVal)
 }
 
 func Test_Sum(t *testing.T) {
