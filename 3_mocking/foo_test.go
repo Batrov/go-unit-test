@@ -41,7 +41,7 @@ func TestBar_SumNew(t *testing.T) {
 
 			switch tt.name {
 			case "SuccessMock1":
-				mockFoo.EXPECT().Sum(int64(5), int64(7)).Return(int64(12))
+				mockFoo.EXPECT().Sum(gomock.Any(), int64(7)).Return(int64(12))
 				mockFoo.EXPECT().GetMessage(int64(1)).Return("Message 2")
 
 			case "SuccessMock2":

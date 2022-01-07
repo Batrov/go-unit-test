@@ -1,5 +1,9 @@
 package module4
 
+/*
+	Patching without defer to return original function will affects in next unit test iteration result
+*/
+
 var foo FooImpl
 var fooSum = foo.Sum
 var fooGetMessage = foo.GetMessage

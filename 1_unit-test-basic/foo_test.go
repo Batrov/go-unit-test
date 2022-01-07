@@ -15,6 +15,10 @@ func Test_Sum(t *testing.T) {
 		want int64
 	}{
 		{"Success", args{a: 2, b: 3}, 5},
+		{"Success1", args{a: 3, b: 5}, 8},
+		{"Success2", args{a: 6, b: 3}, 9},
+		{"Success3", args{a: 2, b: 8}, 10},
+		{"Success4", args{a: 2, b: 9}, 11},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
